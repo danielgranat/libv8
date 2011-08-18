@@ -102,6 +102,7 @@ task :binary, [:version] => [:compile] do |t, options|
   # Lib
   gemspec.files << 'lib/libv8.rb'
   gemspec.files << 'lib/libv8/version.rb'
+  gemspec.files << "lib/libv8/v8/src/platform.h"
   # V8
   Dir.glob('lib/libv8/v8/include/*').each { |f| gemspec.files << f }
   gemspec.files << "lib/libv8/build/v8/libv8.a"
